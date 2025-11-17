@@ -9,21 +9,38 @@ int main() {
       
     //Dados da Primeira Cidade
     //Variáveis para uso
-char estado1;
+//Primeiro estado
+char estado1[15];
+
+//Código da Carta
 char código[4];
+
+//Nome da Cidade
 char cidade[15];
+
+//População da cidade
 int população;
+
+//Área da Cidade
 int Área;
+
+//PIB da cidade
 float PIB;
+
+//Pontos Turisticos da cidade
 int Pontos;
+
+
+//Entradas de dados no programa
+//Para o usuátio completar-
 
 //Nome do Estado
 printf("Nome do Estado: \n");
-scanf("%s", estado1);
+scanf("%14s", estado1);
 
 //Código da Carta
 printf("Digite o código da carta: \n");
-scanf("%s", código);
+scanf(" %s", código);
 
 //Nome da Cidade
 printf("Nome da Cidade: \n");
@@ -46,6 +63,7 @@ printf("Pontos Turisticos: \n");
 scanf("%d", &Pontos);
 
 //Visualização dos dados
+//Linha após linha
 printf("Estado: %s\n", estado1);
 printf("Código: %s\n", código);
 printf("Nome da Cidade %s\n", cidade);
