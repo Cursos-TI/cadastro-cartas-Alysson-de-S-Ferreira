@@ -33,7 +33,7 @@ printf("Nome da Cidade: \n");
 scanf(" %s", cidade);
 
 //População
-printf("Populção: \n");
+printf("População: \n");
 scanf(" %d", &população);
 
 //Área da Cidade
@@ -48,8 +48,8 @@ scanf(" %f", &PIB);
 printf("Pontos Turisticos: \n");
 scanf("%d", &Pontos);
 
-PPC = (float) (PIB / população);
-densidade = (float) (população / Área);
+PPC = (float) PIB / população;
+densidade = (float) população / Área;
 
 
 
@@ -80,7 +80,7 @@ printf("Nome da Cidade: \n");
 scanf(" %s", cidade2);
 
 //População
-printf("Populção: \n");
+printf("População: \n");
 scanf(" %d", &população2);
 
 //Área da Cidade
@@ -95,8 +95,11 @@ scanf(" %f", &PIB2);
 printf("Pontos Turisticos: \n");
 scanf("%d", &Pontos2);
 
-PPC2 = (float) (PIB2 / população2);
-densidade2 = (float) (população2 / Área2);
+PPC2 = (float) PIB2 / população2;
+densidade2 = (float) população2 / Área2;
+
+
+
 
 //Saída de Dados das cidades
 
@@ -113,6 +116,8 @@ printf("Pontos Turisticos: %d\n", Pontos);
 printf("PIB Per Capita: %.2f\n", PPC);
 printf("Densidade Demográfica: %.2f\n", densidade);
 
+
+
 //Saída de Dados da Segunda Cidade
 //Amostragem na Tela
 printf("Dados da Segunda Cidade -\n");
@@ -125,6 +130,45 @@ printf("PIB: %.2f\n", PIB2);
 printf("Pontos Turisticos: %d\n", Pontos2);
 printf("PIB Per Capita: %.2f\n", PPC2);
 printf("Densidade Demográfica: %.2f\n", densidade2);
+
+
+
+
+//Densidade invertida
+float densidadeinv = 1 / densidade;
+float densidadeinv2 = 1 / densidade2;
+
+
+//Comparação de variáveis
+printf("Comparando os parametros das cidades: \n");
+int PopulaçãoMaior = população > população2;
+printf("A população maior é a da primeira cidade? %d\n", PopulaçãoMaior);
+
+int AreaMaior = Área > Área2;
+printf("A maior área é da primeira cidade? %d\n", AreaMaior);
+
+int PIBMaior = PIB > PIB2;
+printf("O maior PIB é o da primaira cidade? %d\n", PIBMaior);
+
+int PPCMaior = PPC > PPC2;
+printf("O maior PIB per Capita é o da primeira cidade? %d\n", PPCMaior);
+
+int DensMaior = densidade > densidade2;
+printf("A maior densidade é a da primeira cidade? %d\n", DensMaior);
+
+int PontosMaior = Pontos > Pontos2;
+printf("A primeira cidade tema mais pontos turisticos que a segunda? %d\n", PontosMaior);
+
+//Criação de Super Poder
+printf("Resultado das comparações \n");
+float SuperPoder1 = população + Área + PIB + Pontos + PPC + densidadeinv;
+float SuperPoder2 = população2 + Área2 + PIB2 + PPC2 + Pontos2 + densidadeinv2;
+int Força = SuperPoder1 > SuperPoder2;
+
+printf("O Super Poder da Primeira Carta é: %.2f\n", SuperPoder1);
+printf("O Super Poder da Segunda Carta é: %.2f\n", SuperPoder2);
+printf("A primeira carta é mais forte que a segunda? %d\n", Força);
+
 
 
 
