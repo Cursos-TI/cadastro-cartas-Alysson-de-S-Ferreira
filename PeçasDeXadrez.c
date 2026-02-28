@@ -1,33 +1,69 @@
 #include <stdio.h>
- 
+
+//Recursividade das peças
+//Movimento da Torre
+void moverTorre(int casas){
+    if (casas > 0){
+    printf("Direita\n");
+    moverTorre(casas - 1);
+    }
+}
+
+//Movimento do Bispo
+   void moverBispo(int casas){
+       if (casas > 0){
+       printf("Direita, Cima\n");
+       moverBispo(casas - 1);
+   }
+   }   
+   
+   //Movimento da Rainha
+   void moverRainha(int casas){
+       if (casas > 0){
+       printf("Esquerda\n");
+       moverRainha(casas - 1);
+   }
+}
+
+
+//Comandos das peças
 int main() {
-    //Movimentação da torre 5 casas para a direita
-    printf("Movimentação da Torre\n");
-    for(int i = 0; i < 5; i++){
-    printf("Direita \n");
-    }
     
-    printf("\n");
-    //Movimentação do Bispo cinco casas na diagonal para cima a direira
-    printf("Movimentação do bispo\n");
-    int Bispo = 1;
+//Torre    
+printf("Movimento da torre\n") ;   
+    int moviment = 5;
+moverTorre(moviment);
+
+ printf("\n");
+ 
+ //Bispo
+printf("Movimento do Bispo\n");
+int Bispo = 5;
+moverBispo(Bispo);
+
+printf("\n");
+
+//Rainha
+ printf("Movimento da rainha");
+int Rainha = 9;
+moverRainha(Rainha);
+
+printf("\n");
+
+//Movimento em "L' do cavalo com 
+ // Movimento do Cavalo
+    printf("Movimentação do cavalo\n");
     
-    while (Bispo <= 5) {
-        printf("Cima, Direita\n");
-        Bispo++;
-    }
+    int A = 1;
     
-    printf("\n");
-    
-    //Movimentação da Rainha, oito casas a esquerda
-    
-    int Rainha = 0;
-    printf("Movimentação da rainha");
-    
-    do{
+    for(int C = 1; C <=1; C++){
+        while(A <= 2) {
+            printf("Baixo\n");
+            A++;
+        }
         printf("Esquerda\n");
-        Rainha++;
-    } while (Rainha <= 8);
+    }
+    
     
     return 0;
 }
