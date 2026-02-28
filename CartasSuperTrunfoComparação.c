@@ -234,6 +234,8 @@ printf("Super Poder da carta: %.2f\n", Super2);
 // MENU INTERATIVO DO JOGO COM SWITCH 
 
 int opçao;
+int resultado1 = 0;
+int resultado2 = 0;
 
 
 printf("Vamos Jogar Super Trunfo \n");
@@ -331,6 +333,133 @@ switch (opçao) {
         printf(" Houve empate!!! ");
     }
     break;
+}
+
+//Nível mestre: a intenção é criar um menu interativo 
+//Deverá ser possível fazer a comparação de dois atributos escolhidos pelo jogador
+//O jogador vence só se a carta for melhor nos dois atributos
+
+int opçao2;
+
+printf("Escolha a segunda opção para comparar: \n");
+printf("A segunda opção tem que ser diferente da primeira");
+printf("1. População \n");
+printf("2. Área \n");
+printf("3. PIB \n");
+printf("4. Pontos Turisticos \n");
+printf("5. PIB per Capita \n");
+printf("6. Densidade Demográfica \n");
+printf("7. Super Poder \n");
+scanf("%d", &opçao2);
+
+if(opçao == opçao2){
+    printf("Você escolheu o mesmo atributo!!!");
+} else 
+{
+    switch (opçao2) {
+    case 1:
+    if (população > população2) {
+        printf("A primeira Carta de código %s, cidade %s, do estado %s venceu!!! \n", código, cidade, estado1);
+    resultado2 = população > população ? 1:0;
+    } 
+    else if (população < população2) {
+        printf("A segunda carta de código %s, cidade %s , do estado %s venceu!!! \n", código2, cidade2, estado2);
+    } 
+    else {
+        printf(" Houve empate!!! ");
+    }
+    break;
+    
+    case 2:
+    if (Área > Área2) {
+        printf("A primeira Carta de código %s, cidade %s, do estado %s venceu!!! \n", código, cidade, estado1);
+    resultado2 = Área > Área2 ? 1:0;
+    } 
+    else if (Área < Área2) {
+        printf("A segunda carta de código %s, cidade %s , do estado %s venceu!!! \n", código2, cidade2, estado2);
+    } 
+    else {
+        printf(" Houve empate!!! ");
+    }
+    break;
+    
+    case 3:
+    if (PIB > PIB2) {
+        printf("A primeira Carta de código %s, cidade %s, do estado %s venceu!!! \n", código, cidade, estado1);
+        resultado2 = PIB > PIB2 ? 1:0;
+    } 
+    else if (PIB < PIB2) {
+        printf("A segunda carta de código %s, cidade %s , do estado %s venceu!!! \n", código2, cidade2, estado2);
+    } 
+    else {
+        printf(" Houve empate!!! ");
+    }
+    break;
+    
+    case 4:
+    if (Pontos > Pontos2) {
+        printf("A primeira Carta de código %s, cidade %s, do estado %s venceu!!! \n", código, cidade, estado1);
+        resultado2 = Pontos > Pontos2 ? 1:0;
+    } 
+    else if (Pontos < Pontos2) {
+        printf("A segunda carta de código %s, cidade %s , do estado %s venceu!!! \n", código2, cidade2, estado2);
+    } 
+    else {
+        printf(" Houve empate!!! ");
+    }
+    break;
+    
+    case 5:
+    if (PPC > PPC2) {
+        printf("A primeira Carta de código %s , cidade %s, do estado %s venceu!!! \n", código, cidade, estado1);
+        resultado2 = PPC > PPC2 ? 1:0;
+    } 
+    else if (PPC < PPC2) {
+        printf("A segunda carta de código %s , cidade %s , do estado %s venceu!!! \n", código2, cidade2, estado2);
+    } 
+    else {
+        printf(" Houve empate!!! ");
+    }
+    break;
+    
+    case 6:
+    if (densidadeinv < densidadeinv2) {
+        printf("A primeira Carta de código %s, cidade %s, do estado %s venceu!!! \n", código, cidade, estado1);
+        resultado2 = densidadeinv < densidadeinv2 ? 1:0;
+    } 
+    else if (densidadeinv > densidadeinv2) {
+        printf("A segunda carta de código %s, cidade %s , do estado %s venceu!!! \n", código2, cidade2, estado2);
+    } 
+    else {
+        printf(" Houve empate!!! ");
+    }
+    break;
+    
+    case 7:
+    if (Super > Super2) {
+        printf("A primeira Carta de código %s, cidade %s, do estado %s venceu!!! \n", código, cidade, estado1);
+        resultado2 = Super > Super2 ? 1:0;
+    } 
+    else if (Super < Super2) {
+        printf("A segunda carta de código %s, cidade %s , do estado %s venceu!!! \n", código2, cidade2, estado2);
+    } 
+    else {
+        printf(" Houve empate!!! ");
+    }
+    break;
+    }      
+    
+    if (resultado1 && resultado2){
+        printf("Você venceu!!!");
+    } else if (resultado1 != resultado2){
+        printf("Houve empate!\n");
+    } else {
+        printf("Infelizmente você perdeu!");
+    }
+    
+  return 0; 
+  
+}
 }
 
 
